@@ -10,21 +10,24 @@ To install / clone this project onto your machine, you should:
 
 Run the following command:
 ```
+conda update conda
 git clone https://github.com/JARVIS843/Stroke_Prediction_ML_Project.git
-```
-(Alternatively, if you prefer using Git CLI, use):
-```
-gh repo clone JARVIS843/Stroke_Prediction_ML_Project
-```
-
-
-Install all the required dependencies from requirements.txt
-```
-pip install -r requirements.txt
+cd Stroke_Prediction_ML_Project
+conda env create -f environment.yml
+conda activate StrokePredictionML
 ```
 
-You're Done, HAVE FUN!!!
-TODO: maybe require the user to create a new environment to avoid dependency conflicts.
+Add the environment (StrokePredictionML) to Jupyter:
+```
+python -m ipykernel install --user --name=StrokePredictionML --display-name "Python (StrokePredictionML)"
+```
+
+(Optional): Confirm the kernel was added successfully:
+```
+jupyter kernelspec list
+```
+You would then need to manually select the kernel from the Jupyter Interface
+
 
 ---
 ## Models:
@@ -32,11 +35,11 @@ TODO: maybe require the user to create a new environment to avoid dependency con
 If you would like to use our pre-trained models, all of them can be found: [Here](./Models/)
 
 Below is a table delineating the specifications and performances for each model:
-| Model Name     | Accuracy|
+| Models     | Accuracy|
 | --------       | ------- |
-| Model A        | 80%     |
-| Model B        | 90%     |
-| Model C        | 98%     |
+| Logistic Regression        | 95.21%     |
+| Random Forest        | 95.01%     |
+
 
 ---
 ## Dataset Used:
@@ -46,11 +49,11 @@ All of the models for this project are trained using the [Kaggle Stroke Predicti
 ---
 ## Authors & Background:
 
-This project is co-developed by: [Jarvis Yang](https://github.com/JARVIS843), and [Jegyeong An](TODO: insert link here).
+This project is co-developed by: [Jarvis Yang](https://github.com/JARVIS843), and [Jegyeong An](https://github.com/northbear99).
 
 The project was intended to be the final project for the [Introduction to Machine Learning](https://github.com/sdrangan/introml) course, provided by Professor [Sundeep Rangan](https://wireless.engineering.nyu.edu/sundeep-rangan/).
 
 ---
-## License:
+## License (MIT):
 
-Most likely MIT license, but we havent decided yet. TODO: decide license.
+See License File
