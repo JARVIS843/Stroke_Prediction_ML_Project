@@ -1,8 +1,8 @@
-[Stroke Prediction using Neural Network](https://github.com/JARVIS843/Stroke_Prediction_ML_Project)
+[Stroke Prediction using Machine Learning](https://github.com/JARVIS843/Stroke_Prediction_ML_Project)
 =========================================
 ---
 ## About:
-[This project](https://github.com/JARVIS843/Stroke_Prediction_ML_Project) aims to predict whether an elderly person is likely to get stroke based on eleven distinct features such as gender, age, and diseases etc. It trains binary classification neural network [models](#models) using [TensorFlow](https://www.tensorflow.org/), on Jupyter Notebook.
+[This project](https://github.com/JARVIS843/Stroke_Prediction_ML_Project) aims to predict whether an elderly person is likely to get stroke based on eleven distinct features such as gender, age, and diseases etc. It trains various binary classification  [models](#models) using different methods, on Jupyter Notebook.
 
 --- 
 ## Installation Instructions:
@@ -35,16 +35,19 @@ You would then need to manually select the kernel from the Jupyter Interface
 If you would like to use our pre-trained models, all of them can be found: [Here](./Models/)
 
 Below is a table delineating the specifications and performances for each model:
-| Models     | Accuracy|
-| --------       | ------- |
-| Logistic Regression        | 95.21%     |
-| Random Forest        | 95.01%     |
+| Models                        | Accuracy   |
+| --------                      | -------    |
+| Logistic Regression           | 95.21%     |
+| Random Forest                 | 95.01%     |
 
+***Note:** The models are serialized and exported using [Pickle](https://docs.python.org/3/library/pickle.html)
 
 ---
 ## Dataset Used:
 
-All of the models for this project are trained using the [Kaggle Stroke Prediction Dataset](https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset)
+All of the models for this project are trained using the [Kaggle Stroke Prediction Dataset](https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset). 
+
+In the beginning of [ML_project.ipynb](./ML_project.ipynb), you are provided an option to use either the pre-downloaded dataset (downloaded on 12/13/2024) in [Dataset](./Dataset/), or to download the newest dataset from Kaggle if you are using Colab or Linux.
 
 ---
 ## Authors & Background:
