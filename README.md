@@ -94,7 +94,7 @@ If you would like to use our pre-trained models, or to see the performances of t
 
 All of the models for this project are trained using the [Kaggle Stroke Prediction Dataset](https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset). 
 
-In the beginning of [ML_project.ipynb](./ML_project.ipynb), you are provided an option to use either the pre-downloaded dataset (downloaded on 12/13/2024) in [Dataset](./Dataset/), or to download the newest dataset from Kaggle if you are using Colab or Linux.
+There's a full pre-dowloaded (downloaded on 12/13/2024) dataset in the [Dataset](/Dataset/) folder to save your time re-downloading it from Kaggle. The beginning of the [ML_project.ipynb](/ML_project.ipynb) automatically downloads the newest dataset from Kaggle, whilst [Neural_Network_Model.ipynb](/Neural_Network_Model.ipynb) relies on the pre-downloaded dataset.
 
 ---
 ## Authors & Background:
