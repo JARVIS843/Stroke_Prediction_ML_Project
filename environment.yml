@@ -3,7 +3,7 @@ channels:
   - defaults
   - conda-forge
 dependencies:
-  - python=3.9.21
+  - python=3.10.12
   - pip
   - pip:
       - asttokens==2.0.5
