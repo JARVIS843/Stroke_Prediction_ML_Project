@@ -24,7 +24,7 @@ if ret != 0:
 print('Done.')
 
 print('--> Building RKNN model with fp16 quantization')
-ret = rknn.build(do_quantization=True, dataset='./Models/dataset.txt')
+ret = rknn.build(do_quantization=False)
 if ret != 0:
     print('Build failed')
     exit(ret)
