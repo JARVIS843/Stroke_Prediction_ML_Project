@@ -3,8 +3,8 @@
 from rknn.api import RKNN
 
 # Paths
-ONNX_MODEL_PATH = './Models/SKIN_72.onnx'
-RKNN_MODEL_PATH = './Models/SKIN_72.rknn'
+ONNX_MODEL_PATH = './Models/SKIN_66.onnx'
+RKNN_MODEL_PATH = './Models/SKIN_66.rknn'
 
 
 # 1. Create RKNN object
@@ -15,6 +15,8 @@ rknn = RKNN(verbose=True)
 print('--> Configuring RKNN (FP16 for RK3588)')
 rknn.config(
     target_platform='rk3588',
+    mean_values=[[0, 0, 0], [0.0]],      # For 'image_input' and 'meta_input'
+    std_values=[[255, 255, 255], [1.0]], 
     quantized_dtype='w16a16i_dfp'
 )
 
@@ -27,8 +29,8 @@ ret = rknn.load_onnx(
     model=ONNX_MODEL_PATH,
     inputs=['image_input', 'meta_input'],
     input_size_list=[
-        [3, 224, 224, 3],  # image_input: (1, H, W, C)
-        [3, 18]            # meta_input: (1, feature_dim)
+        [3, 224, 224, 3],  # image_input: (3, H, W, C)
+        [3, 18]            # meta_input: (3, feature_dim)
     ]
 )
 
@@ -39,7 +41,7 @@ print('    Model loaded successfully.')
 
 # 4. Build the RKNN model in FP16 mode (no calibration, no INT8)
 print('--> Building RKNN model (FP16 simulation)')
-ret = rknn.build(do_quantization=False)
+ret = rknn.build(do_quantization=True, dataset = './Models/quant_data/dataset.txt')
 if ret != 0:
     print('*** RKNN build failed')
     exit(ret)

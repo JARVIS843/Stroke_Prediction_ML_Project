@@ -4,7 +4,7 @@ import pandas as pd
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix
 from sklearn.preprocessing import LabelEncoder, MinMaxScaler
 from sklearn.utils import resample
-from rknn.api import RKNNLite
+from rknnlite.api import RKNNLite
 import os
 
 # ========== Preprocessing Function ==========
@@ -75,18 +75,28 @@ ret = rknn_lite.init_runtime(core_mask=RKNNLite.NPU_CORE_ALL)
 assert ret == 0, 'Failed to init runtime.'
 
 # Inference timing
+BATCH_SIZE = 4
 inference_times = []
 y_pred = []
 
-for i in range(len(X_input)):
+# Pad input if needed to make total divisible by 4
+pad_len = (-len(X_input)) % BATCH_SIZE
+if pad_len > 0:
+    X_input = np.concatenate([X_input, np.zeros((pad_len, X_input.shape[1]), dtype=np.float32)])
+    y_true = np.concatenate([y_true, np.zeros(pad_len, dtype=y_true.dtype)])
+
+# Inference loop in batches
+for i in range(0, len(X_input), BATCH_SIZE):
+    batch_input = X_input[i:i+BATCH_SIZE]
     start_time = time.time()
-    output = rknn_lite.inference(inputs=[X_input[i:i+1]])
+    output = rknn_lite.inference(inputs=[batch_input])
     inference_times.append(time.time() - start_time)
 
     if output is not None:
-        y_pred.append(int(output[0][0][0] > 0.5))
+        preds = (output[0].squeeze() > 0.5).astype(int)
+        y_pred.extend(preds.tolist())
     else:
-        y_pred.append(0)  # fallback to 0 if failed
+        y_pred.extend([0] * BATCH_SIZE)  # fallback
 
 # ========== Metrics ==========
 accuracy = accuracy_score(y_true, y_pred)
