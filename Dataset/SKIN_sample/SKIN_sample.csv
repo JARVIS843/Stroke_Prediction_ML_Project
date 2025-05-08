@@ -1,0 +1,21 @@
+lesion_id,image_id,dx,dx_type,age,sex,localization,image_path,label_name
+HAM_0002632,ISIC_0029943,nv,follow_up,50.0,female,genital,Dataset/SKIN_sample/ISIC_0029943.jpg,Melanocytic Nevi
+HAM_0005159,ISIC_0029826,nv,histo,50.0,male,back,Dataset/SKIN_sample/ISIC_0029826.jpg,Melanocytic Nevi
+HAM_0006037,ISIC_0026571,mel,histo,40.0,female,chest,Dataset/SKIN_sample/ISIC_0026571.jpg,Melanoma
+HAM_0003507,ISIC_0032784,nv,histo,30.0,male,lower extremity,Dataset/SKIN_sample/ISIC_0032784.jpg,Melanocytic Nevi
+HAM_0005210,ISIC_0025965,nv,follow_up,50.0,male,trunk,Dataset/SKIN_sample/ISIC_0025965.jpg,Melanocytic Nevi
+HAM_0001979,ISIC_0027527,bkl,histo,55.0,male,face,Dataset/SKIN_sample/ISIC_0027527.jpg,Benign Keratosis-like Lesions
+HAM_0003340,ISIC_0028507,nv,histo,70.0,female,back,Dataset/SKIN_sample/ISIC_0028507.jpg,Melanocytic Nevi
+HAM_0006252,ISIC_0024646,akiec,histo,70.0,female,face,Dataset/SKIN_sample/ISIC_0024646.jpg,Actinic Keratoses
+HAM_0001708,ISIC_0033719,nv,histo,55.0,male,lower extremity,Dataset/SKIN_sample/ISIC_0033719.jpg,Melanocytic Nevi
+HAM_0006596,ISIC_0027005,nv,histo,35.0,male,back,Dataset/SKIN_sample/ISIC_0027005.jpg,Melanocytic Nevi
+HAM_0002948,ISIC_0030927,nv,follow_up,40.0,female,lower extremity,Dataset/SKIN_sample/ISIC_0030927.jpg,Melanocytic Nevi
+HAM_0005208,ISIC_0028781,nv,follow_up,45.0,male,abdomen,Dataset/SKIN_sample/ISIC_0028781.jpg,Melanocytic Nevi
+HAM_0004545,ISIC_0026849,bkl,histo,70.0,male,back,Dataset/SKIN_sample/ISIC_0026849.jpg,Benign Keratosis-like Lesions
+HAM_0001165,ISIC_0030199,nv,follow_up,40.0,male,upper extremity,Dataset/SKIN_sample/ISIC_0030199.jpg,Melanocytic Nevi
+HAM_0001428,ISIC_0026268,mel,histo,80.0,male,face,Dataset/SKIN_sample/ISIC_0026268.jpg,Melanoma
+HAM_0003322,ISIC_0031649,nv,consensus,50.0,female,face,Dataset/SKIN_sample/ISIC_0031649.jpg,Melanocytic Nevi
+HAM_0001373,ISIC_0029999,nv,follow_up,50.0,female,lower extremity,Dataset/SKIN_sample/ISIC_0029999.jpg,Melanocytic Nevi
+HAM_0005399,ISIC_0030474,nv,follow_up,60.0,male,back,Dataset/SKIN_sample/ISIC_0030474.jpg,Melanocytic Nevi
+HAM_0001149,ISIC_0028924,nv,follow_up,55.0,male,upper extremity,Dataset/SKIN_sample/ISIC_0028924.jpg,Melanocytic Nevi
+HAM_0000065,ISIC_0025691,bcc,histo,50.0,female,abdomen,Dataset/SKIN_sample/ISIC_0025691.jpg,Basal Cell Carcinoma

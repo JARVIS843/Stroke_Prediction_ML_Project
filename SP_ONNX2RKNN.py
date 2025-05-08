@@ -1,7 +1,7 @@
 from rknn.api import RKNN
 
-ONNX_MODEL_PATH = './Models/best_model_91.onnx'
-RKNN_MODEL_PATH = './Models/best_model_91.rknn'
+ONNX_MODEL_PATH = './Models/SP_91.onnx'
+RKNN_MODEL_PATH = './Models/SP_91.rknn'
 
 rknn = RKNN()
 
@@ -16,7 +16,7 @@ print('--> Loading ONNX model')
 ret = rknn.load_onnx(
     model=ONNX_MODEL_PATH,
     inputs = ['input'],
-    input_size_list=[[1, 19]]  # Set explicit shape
+    input_size_list=[[4, 19]]  # Set explicit shape
 )
 if ret != 0:
     print('Failed to load ONNX model')
