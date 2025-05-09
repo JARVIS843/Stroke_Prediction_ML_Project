@@ -59,16 +59,16 @@ if pad_len > 0:
 # -----------------------------
 # RKNN Inference
 # -----------------------------
-rknn_lite = RKNNLite()
+rknn_lite = RKNNLite(verbose = False)
 print('--> Loading RKNN model')
-ret = rknn_lite.load_rknn('./Models/SKIN_72.rknn')
+ret = rknn_lite.load_rknn('./Models/SKIN_3.rknn')
 if ret != 0:
     print('Failed to load RKNN model')
     exit(ret)
 print('Done.')
 
 print('--> Init runtime on all NPU cores')
-ret = rknn_lite.init_runtime(core_mask=RKNNLite.NPU_CORE_0_1_2)
+ret = rknn_lite.init_runtime(core_mask=RKNNLite.NPU_CORE_ALL)
 if ret != 0:
     print('Failed to init runtime')
     exit(ret)
@@ -95,7 +95,7 @@ for i in range(0, len(X_img), BATCH_SIZE):
     batch_meta = X_meta[i:i+BATCH_SIZE]
 
     start = time.time()
-    output = rknn_lite.inference(inputs=[batch_img, batch_meta])
+    output = rknn_lite.inference(inputs=[batch_img, batch_meta], data_format = 'nchw')
     inference_times.append(time.time() - start)
 
     if output is not None:
