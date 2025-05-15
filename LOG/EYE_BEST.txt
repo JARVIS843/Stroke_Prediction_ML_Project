@@ -1,0 +1,76 @@
+Script started on 2025-05-15 21:53:27+08:00 [TERM="xterm-color" TTY="/dev/ttyFIQ0" COLUMNS="237" LINES="63"]
+[?2004h]0;elf@elf2-desktop: ~/ML_Lite[01;32melf@elf2-desktop[00m:[01;34m~/ML_Lite[00m$ python3 EYE_Bench.py 
+[?2004l/home/elf/ML_Lite/EYE_Bench.py:20: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  X_img.append(np.array(img, np.float32) / 255.0)
+W rknn-toolkit-lite2 version: 2.3.2
+--> Loading RKNN model
+Done.
+--> Init runtime on all NPU cores
+I RKNN: [21:53:32.855] RKNN Runtime Information, librknnrt version: 2.3.2 (429f97ae6b@2025-04-09T09:09:27)
+I RKNN: [21:53:32.855] RKNN Driver Information, version: 0.9.6
+I RKNN: [21:53:32.855] RKNN Model Information, version: 6, toolkit version: 2.3.2(compiler version: 2.3.2 (e045de294f@2025-04-07T19:48:25)), target: RKNPU v2, target platform: rk3588, framework name: ONNX, framework layout: NCHW, model inference type: static_shape
+W RKNN: [21:53:32.874] query RKNN_QUERY_INPUT_DYNAMIC_RANGE error, rknn model is static shape type, please export rknn with dynamic_shapes
+W Query dynamic range failed. Ret code: RKNN_ERR_MODEL_INVALID. (If it is a static shape RKNN model, please ignore the above warning message.)
+Done.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+
+=== Classification Report ===
+                      precision    recall  f1-score   support
+
+            cataract       0.91      0.84      0.88        25
+diabetic_retinopathy       0.88      0.84      0.86        25
+            glaucoma       0.90      0.72      0.80        25
+              normal       0.61      0.80      0.69        25
+
+            accuracy                           0.80       100
+           macro avg       0.82      0.80      0.81       100
+        weighted avg       0.82      0.80      0.81       100
+
+
+=== Confusion Matrix ===
+                      cataract  diabetic_retinopathy  glaucoma  normal
+cataract                    21                     0         0       4
+diabetic_retinopathy         0                    21         0       4
+glaucoma                     2                     0        18       5
+normal                       0                     3         2      20
+
+Average Inference Time per Batch (3 samples): 0.0186 seconds
+Average Time per Sample: 0.0062 seconds
+RKNNLite released.
+[?2004h]0;elf@elf2-desktop: ~/ML_Lite[01;32melf@elf2-desktop[00m:[01;34m~/ML_Lite[00m$ exit
+[?2004lexit
+
+Script done on 2025-05-15 21:53:38+08:00 [COMMAND_EXIT_CODE="0"]

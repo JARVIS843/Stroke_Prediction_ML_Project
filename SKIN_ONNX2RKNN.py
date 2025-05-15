@@ -3,8 +3,8 @@
 from rknn.api import RKNN
 
 # Paths
-ONNX_MODEL_PATH = './Models/SKIN_66.onnx'
-RKNN_MODEL_PATH = './Models/SKIN_66.rknn'
+ONNX_MODEL_PATH = './Models/SKIN_69.onnx'
+RKNN_MODEL_PATH = './Models/SKIN_69_3_quant.rknn'
 
 
 # 1. Create RKNN object
@@ -15,9 +15,9 @@ rknn = RKNN(verbose=True)
 print('--> Configuring RKNN (FP16 for RK3588)')
 rknn.config(
     target_platform='rk3588',
-    mean_values=[[0]*224, [0.0]*18],      # For 'image_input' and 'meta_input'
-    std_values=[[255]*224, [1.0]*18], 
-    quantized_dtype='w16a16i_dfp'
+    float_dtype = 'float16',
+    quantized_dtype = 'w8a8',
+    optimization_level = 3
 )
 
 print('    Configuration done.')
@@ -41,7 +41,8 @@ print('    Model loaded successfully.')
 
 # 4. Build the RKNN model in FP16 mode (no calibration, no INT8)
 print('--> Building RKNN model (FP16 simulation)')
-ret = rknn.build(do_quantization=False, dataset = None)   # './Models/quant_data/dataset.txt'
+ret = rknn.build(do_quantization=True, 
+                 dataset = './Models/quant_data/dataset.txt')
 if ret != 0:
     print('*** RKNN build failed')
     exit(ret)

@@ -1,0 +1,89 @@
+Script started on 2025-05-15 21:54:04+08:00 [TERM="xterm-color" TTY="/dev/ttyFIQ0" COLUMNS="237" LINES="63"]
+[?2004h]0;elf@elf2-desktop: ~/ML_Lite[01;32melf@elf2-desktop[00m:[01;34m~/ML_Lite[00m$ exitpython3 EYE_Bench.py exit[Kpython3 EYE_Bench.py [K[K[K[K[K[K[K[K[K[K[K[K[KSKIN_Bench.py 
+[?2004l/home/elf/ML_Lite/SKIN_Bench.py:22: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  X_img.append(np.array(img, np.float32) / 255.0)
+/home/elf/ML_Lite/SKIN_Bench.py:26: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+
+
+  meta_df['age'].fillna(meta_df['age'].mean(), inplace=True)
+W rknn-toolkit-lite2 version: 2.3.2
+--> Loading RKNN model
+Done.
+--> Init runtime on all NPU cores
+I RKNN: [21:54:13.049] RKNN Runtime Information, librknnrt version: 2.3.2 (429f97ae6b@2025-04-09T09:09:27)
+I RKNN: [21:54:13.049] RKNN Driver Information, version: 0.9.6
+I RKNN: [21:54:13.049] RKNN Model Information, version: 6, toolkit version: 2.3.2(compiler version: 2.3.2 (e045de294f@2025-04-07T19:48:25)), target: RKNPU v2, target platform: rk3588, framework name: ONNX, framework layout: NCHW, model inference type: static_shape
+W RKNN: [21:54:13.065] query RKNN_QUERY_INPUT_DYNAMIC_RANGE error, rknn model is static shape type, please export rknn with dynamic_shapes
+W Query dynamic range failed. Ret code: RKNN_ERR_MODEL_INVALID. (If it is a static shape RKNN model, please ignore the above warning message.)
+Done.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+W The input[0] need NHWC data format, but NCHW set, the data format and data buffer will be changed to NHWC.
+
+=== Classification Report ===
+                               precision    recall  f1-score   support
+
+            Actinic Keratoses       0.78      0.50      0.61        14
+         Basal Cell Carcinoma       0.59      0.71      0.65        14
+Benign Keratosis-like Lesions       0.55      0.79      0.65        14
+               Dermatofibroma       0.90      0.64      0.75        14
+             Melanocytic Nevi       0.78      0.93      0.85        15
+                     Melanoma       0.81      0.87      0.84        15
+             Vascular Lesions       1.00      0.71      0.83        14
+
+                     accuracy                           0.74       100
+                    macro avg       0.77      0.74      0.74       100
+                 weighted avg       0.77      0.74      0.74       100
+
+
+=== Confusion Matrix ===
+                               Actinic Keratoses  Basal Cell Carcinoma  Benign Keratosis-like Lesions  Dermatofibroma  Melanocytic Nevi  Melanoma  Vascular Lesions
+Actinic Keratoses                              7                     4                              2               0                 0         1                 0
+Basal Cell Carcinoma                           1                    10                              2               0                 1         0                 0
+Benign Keratosis-like Lesions                  0                     0                             11               1                 2         0                 0
+Dermatofibroma                                 1                     2                              1               9                 0         1                 0
+Melanocytic Nevi                               0                     0                              0               0                14         1                 0
+Melanoma                                       0                     1                              1               0                 0        13                 0
+Vascular Lesions                               0                     0                              3               0                 1         0                10
+
+Average Inference Time per Batch (3 samples): 0.0197 seconds
+Average Time per Sample: 0.0066 seconds
+RKNNLite released.
+[?2004h]0;elf@elf2-desktop: ~/ML_Lite[01;32melf@elf2-desktop[00m:[01;34m~/ML_Lite[00m$ exit
+[?2004lexit
+
+Script done on 2025-05-15 21:54:19+08:00 [COMMAND_EXIT_CODE="0"]
