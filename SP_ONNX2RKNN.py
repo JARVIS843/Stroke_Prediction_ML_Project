@@ -8,7 +8,7 @@ rknn = RKNN()
 print('--> Configuring RKNN (FP16 quantization)')
 rknn.config(
     target_platform='rk3588',
-    quantized_dtype='w16a16i_dfp'
+    float_dtype = 'float16',
 )
 print('Done.')
 
